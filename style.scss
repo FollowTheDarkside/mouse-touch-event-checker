@@ -1,0 +1,42 @@
+$mobileSize: 768px; // tailwind's md size
+
+body {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  //width: 100%;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  color: rgba(5, 5, 5, 1.0);
+  background-color: rgba(250, 250, 250, 1.0);
+  //overflow-x: hidden !important;
+}
+.main-sec{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 1.0;
+  transition: .3s ease-out;
+  .contents{
+    max-width: 640px;
+  }
+}
+#check-btn{
+  width: 200px;
+  height: 40px;
+}
+#clear-btn{
+  height: 30px;
+}
+#output-area{
+  width: 90%;
+  height: 200px;
+  background-color: rgba(240, 240, 240, 1.0);
+}
+@media (max-width: ($mobileSize)) { // when mobile size
+    .contents{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+}
