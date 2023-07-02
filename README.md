@@ -1,6 +1,8 @@
 # Mouse & Touch Event Checker
 
 ## Overview
+![mouse-touch-event-checker](https://github.com/FollowTheDarkside/mouse-touch-event-checker/assets/9309605/c77f80a4-4224-4c7d-9c03-c7f79ce7c81a)
+
 I've always been puzzled by mouse and touch event firing timings, so I created a page to check them out.<br>
 -> [Demo Page](https://followthedarkside.github.io/mouse-touch-event-checker/)
 
