@@ -10,12 +10,15 @@
     <div class="main-sec">
       <h1 class="contents">Mouse & Touch Event Checker</h1>
       <p class="contents">
-        Click or Touch Button!<br>
-        (It does not include "mosemoves" & "touchmove" that occur after "mouseenter")
+        Click or Touch Button!
       </p>
       <p class="contents"><button id="check-btn" type="button">BUTTON</button></p>
       <div class="contents"><textarea id="output-area" name="" readonly></textarea></div>
       <p><button id="clear-btn" type="button">CLEAR</button></p>
+      <div>
+        <p class="contents">- Event List -</p>
+        <ul id="event-list"></ul>
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

@@ -3,7 +3,7 @@ import './style.scss'
 let events = [
   "mouseover",
   "mouseenter",
-  //"mousemove",
+  "mousemove",
   "mousedown",
   "mouseup",
   "click",
@@ -11,7 +11,7 @@ let events = [
   "mouseout",
   "mouseleave",
   "touchstart",
-  //"touchmove",
+  "touchmove",
   "touchend",
   "touchcancel",
 ]
@@ -23,11 +23,22 @@ window.addEventListener('load', ()=>{
 function init(){
   let checkBtn = document.getElementById("check-btn");
   let textarea = document.getElementById("output-area");
+  let eventList = document.getElementById('event-list');
 
-  // Add event listener
-  for(let eventName of events){
-    checkBtn.addEventListener(eventName, (e) => {
-      textarea.value += eventName+"\n";
+  // Set event checkbox & Add event listener
+  for(let i=0;i<events.length;i++){
+    let checkBox = ""
+    if(events[i].includes("move")){
+      checkBox = "<li><input type='checkbox' id='check"+String(i+1)+"'><label for='check"+String(i+1)+"'>"+events[i]+"</label></li>";
+    }else{
+      checkBox = "<li><input type='checkbox' id='check"+String(i+1)+"' checked='checked'><label for='check"+String(i+1)+"'>"+events[i]+"</label></li>";
+    }
+    eventList.insertAdjacentHTML('beforeend', checkBox);
+
+    checkBtn.addEventListener(events[i], (e) => {
+      if(document.getElementById("check"+String(i+1)).checked){
+        textarea.value += events[i]+"\n";
+      }
     }, false);
   }
 
